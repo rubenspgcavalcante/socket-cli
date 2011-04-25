@@ -31,8 +31,6 @@ void client::socketClose(){
 }
 
 char* client::send(char* msg){
-    //bzero(buffer,256);
-    //fgets(buffer,255,stdin);
     n = write(sockfd,msg,strlen(msg));
     if (n < 0) {
         error("ERROR writing to socket");
