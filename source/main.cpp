@@ -14,7 +14,7 @@ int main(int argc, char** argv){
 	cout << argv[1]; cout << ":" ; cout << port << endl;
 	client c(argv[1], port);
 	c.socketConnect();
-	c.send(argv[3]);
+	cout<< c.send(argv[3]) << endl;
 	c.socketClose();
 	return 1;
 }
